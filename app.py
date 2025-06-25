@@ -23,7 +23,9 @@ def remove_bg():
     return send_file(output_io, mimetype='image/png')
 
 # This block ensures Render sees the correct port
+print("🚧 Flask app.py is starting...")
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    print(f"🚀 Starting Flask on port {port}...")
+    print(f"✅ Binding to port: {port}")
     app.run(host='0.0.0.0', port=port)
